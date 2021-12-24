@@ -1,59 +1,19 @@
 {
-  "name": "@shelf/xxxxxx",
+  "name": "@shelf/serverless-simplify-default-exec-role-plugin",
   "version": "0.0.0",
-  "description": "xxxxxx",
+  "description": "serverless-simplify-default-exec-role-plugin",
   "license": "MIT",
   "author": {
     "name": "Vlad Holubiev",
     "email": "vlad@shelf.io",
     "url": "https://shelf.io"
   },
-  "main": "lib",
-  "types": "lib/index.d.ts",
+  "main": "index.js",
   "files": [
-    "lib"
+    "index.js"
   ],
-  "scripts": {
-    "build": "rm -rf lib/ && yarn build:types && yarn build:code",
-    "build:code": "babel src --out-dir lib --ignore '**/*.test.ts' --extensions '.ts' && find ./lib -name '*.test.d.ts' -delete",
-    "build:types": "tsc --emitDeclarationOnly --declaration --isolatedModules false --declarationDir lib",
-    "coverage": "yarn test --coverage",
-    "lint": "eslint . --ext .js,.ts,.json --fix",
-    "lint:ci": "eslint . --ext .js,.ts,.json",
-    "prepack": "yarn build",
-    "test": "TZ=UTC jest src",
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch"
-  },
-  "lint-staged": {
-    "*.{html,md,yml}": [
-      "prettier --write"
-    ],
-    "*.{js,ts,json}": [
-      "eslint --fix"
-    ]
-  },
-  "babel": {
-    "extends": "@shelf/babel-config/backend"
-  },
-  "prettier": "@shelf/prettier-config",
   "dependencies": {},
-  "devDependencies": {
-    "@babel/cli": "7.16.0",
-    "@babel/core": "7.16.5",
-    "@shelf/babel-config": "0.1.5",
-    "@shelf/eslint-config": "2.8.0",
-    "@shelf/prettier-config": "1.0.0",
-    "@shelf/tsconfig": "0.0.6",
-    "@types/jest": "27.0.3",
-    "@types/node": "14",
-    "eslint": "8.5.0",
-    "husky": "7.0.4",
-    "jest": "27.4.5",
-    "lint-staged": "12.1.4",
-    "prettier": "2.5.1",
-    "typescript": "4.5.4"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=14"
   },
