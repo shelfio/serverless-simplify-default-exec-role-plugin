@@ -1,4 +1,4 @@
-# serverless-simplify-default-exec-role-plugin [![CircleCI](https://circleci.com/gh/shelfio/serverless-simplify-default-exec-role-plugin/tree/master.svg?style=svg)](https://circleci.com/gh/shelfio/serverless-simplify-default-exec-role-plugin/tree/master)![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+# serverless-simplify-default-exec-role-plugin
 
 > Fixes "IamRoleLambdaExecution - Maximum policy size of 10240 bytes exceeded" error
 
