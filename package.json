@@ -1,6 +1,6 @@
 {
   "name": "@shelf/serverless-simplify-default-exec-role-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "serverless-simplify-default-exec-role-plugin",
   "license": "MIT",
   "author": {
