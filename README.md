@@ -18,7 +18,7 @@ In your `serverless.yml` file:
 
 ```yaml
 plugins:
-  - serverless-simplify-default-exec-role-plugin
+  - '@shelf/serverless-simplify-default-exec-role-plugin'
 ```
 
 ## Explanation
