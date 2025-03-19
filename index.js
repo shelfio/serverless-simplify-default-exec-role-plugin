@@ -26,9 +26,13 @@ function simplifyBaseIAMLogGroups(serverless) {
 
         // replace only for log-group
         for (const [index, fn] of statement.Resource.entries()) {
-          statement.Resource[index]["Fn::Sub"] = fn["Fn::Sub"].includes("log-group")
-            ? "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:*"
-            : fn["Fn::Sub"];
+          if (fn["Fn::Sub"]) {
+            statement.Resource[index]["Fn::Sub"] = fn["Fn::Sub"].includes(
+              "log-group"
+            )
+              ? "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:*"
+              : fn["Fn::Sub"];
+          }
         }
         newPolicyStatements.push(statement);
       }
