@@ -12,8 +12,15 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "lint": "oxfmt",
+    "lint:ci": "oxfmt --check"
+  },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@shelf/prettier-config": "1.1.1",
+    "oxfmt": "0.55.0"
+  },
   "engines": {
     "node": ">=14"
   },

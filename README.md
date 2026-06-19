@@ -27,17 +27,17 @@ By default, Serverless framework creates such role:
 
 ```json5
 {
-  Effect: "Allow",
-  Action: ["logs:CreateLogStream", "logs:CreateLogGroup"],
+  Effect: 'Allow',
+  Action: ['logs:CreateLogStream', 'logs:CreateLogGroup'],
   Resource: [
     {
-      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/production-users-createUser:*",
+      'Fn::Sub': 'arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/production-users-createUser:*',
     },
     {
-      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/production-users-updateUser:*",
+      'Fn::Sub': 'arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/production-users-updateUser:*',
     },
     {
-      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/production-users-deleteUser:*",
+      'Fn::Sub': 'arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/production-users-deleteUser:*',
     },
     // dozens of identical lines
   ],
@@ -50,11 +50,11 @@ This plugin simplifies the default execution role to smth like this:
 
 ```json5
 {
-  Effect: "Allow",
-  Action: ["logs:CreateLogStream", "logs:CreateLogGroup"],
+  Effect: 'Allow',
+  Action: ['logs:CreateLogStream', 'logs:CreateLogGroup'],
   Resource: [
     {
-      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:*",
+      'Fn::Sub': 'arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:*',
     },
   ],
 }
