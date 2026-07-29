@@ -3,15 +3,16 @@
 coverage/
 lib/
 node_modules/
+.pnpm-store/
 
 *.log
+.pnpm-debug.log*
+pnpm-error.log*
 junit.xml
 draft.js
 *.draft.js
 draft.ts
 *.draft.ts
-yarn.lock
-
 .env
 .DS_Store
 
