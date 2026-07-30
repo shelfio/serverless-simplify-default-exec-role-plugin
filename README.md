@@ -9,7 +9,7 @@ It searches for the `IamRoleLambdaExecution` resource and modifies the only poli
 ## Install
 
 ```
-$ yarn add --dev @shelf/serverless-simplify-default-exec-role-plugin
+$ pnpm add -D @shelf/serverless-simplify-default-exec-role-plugin
 ```
 
 ## Usage
@@ -60,14 +60,19 @@ This plugin simplifies the default execution role to smth like this:
 }
 ```
 
-## Publish
+## How to release a new version
+
+Bump the version on the same branch that contains the changes you want to publish:
 
 ```sh
-$ git checkout master
-$ yarn version
-$ yarn publish
-$ git push origin master --tags
+pnpm version major|minor|patch|x.y.z
 ```
+
+Use `major`, `minor`, `patch`, a prerelease increment, or an exact `x.y.z` version.
+
+`pnpm version` creates the version commit automatically. Push the branch, open a
+PR to `master`, and merge it. After the merge, centralized CircleCI publishes the
+new version to npm using OIDC.
 
 ## License
 
