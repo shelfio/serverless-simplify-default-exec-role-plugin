@@ -20,7 +20,7 @@
   "dependencies": {},
   "devDependencies": {
     "@shelf/prettier-config": "1.1.1",
-    "oxfmt": "0.58.0"
+    "oxfmt": "0.60.0"
   },
   "engines": {
     "node": ">=14",
